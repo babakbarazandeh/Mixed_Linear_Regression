@@ -57,9 +57,21 @@ The above figure might not  be  a fair comparison  since each step of the propos
 
 ## References
 <a id="1">[1]</a> 
-Dijkstra, E. W. (1968). 
-Go to statement considered harmful. 
-Communications of the ACM, 11(3), 147-148. 
+B. Klein, G. Lev, G. Sadeh, and L. Wolf, “Fisher
+vectors derived from hybrid gaussian-laplacian mixture models for image annotation,” arXiv preprint
+arXiv:1411.7399, 2014.
+
+<a id="2">[2]</a> 
+T. Amin, M. Zeytinoglu, and L. Guan, “Application of
+laplacian mixture model to image and video retrieval,”
+IEEE Transactions on Multimedia, vol. 9, no. 7, pp.
+1416–1429, 2007.
+
+<a id="3">[3]</a> 
+S. Gaffney and P. Smyth, “Trajectory clustering with
+mixtures of regression models,” in Proceedings of
+the fifth ACM SIGKDD international conference on
+Knowledge discovery and data mining, 1999, pp. 63–72
 # Getting started
 Run Main.m
 
