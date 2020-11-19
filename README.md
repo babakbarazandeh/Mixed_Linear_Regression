@@ -22,7 +22,7 @@ where <img src="https://latex.codecogs.com/gif.latex?\inline&space;\sigma" title
 
 
 
-Our goal is inferring <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^*" title="\boldsymbol{\beta}^*" /> given <img src="https://latex.codecogs.com/gif.latex?\inline&space;\{(y_i,&space;\textbf{x}_{i})\}_{i&space;=&space;1}^N" title="\{(y_i, \textbf{x}_{i})\}_{i = 1}^N" /> via Maximum likelihood estimator (MLE), which is the commonly used in practice [[4]](#4). Given the described model, the MLE $\widehat{\boldsymbol{\beta}}$ can be computed by solving: 
+Our goal is inferring <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^*" title="\boldsymbol{\beta}^*" /> given <img src="https://latex.codecogs.com/gif.latex?\inline&space;\{(y_i,&space;\textbf{x}_{i})\}_{i&space;=&space;1}^N" title="\{(y_i, \textbf{x}_{i})\}_{i = 1}^N" /> via Maximum likelihood estimator (MLE), which is the commonly used in practice [[4]](#4). Given the described model, the MLE <img src="https://latex.codecogs.com/gif.latex?\inline&space;\widehat{\boldsymbol{\beta}}" title="\widehat{\boldsymbol{\beta}}" /> can be computed by solving: 
 
 \begin{align}\label{eg:Likelihood}
 \nonumber
