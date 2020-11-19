@@ -46,22 +46,12 @@ Let us discuss this optimization problem in two cases of Gaussian and Laplacian 
 
 # Additive Gaussian noise
 When the additive noise has Gaussian distribution, problem~\eqref{M-step-seperate} is equivalent to
-\begin{equation}\nonumber
-\begin{aligned}
- \bbeta^{t+1}_k = \arg\min_{\boldsymbol{\beta}_k}  \sum_{i = 1}^{N} {w}_{k,i}^{t+1}  (y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)^2, \quad \forall k.
-\end{aligned}
-\end{equation}
-% The solution of this problem can be easily derived by,
-% \begin{align*}
-%     \nabla_{\bbeta_k} \sum_{i = 1}^{N} {w}_{k,i}^{t+1}  (y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)^2, \quad \forall k. = 0 \rightarrow
-% \end{align*}
+
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^{t&plus;1}_k&space;=&space;\arg\min_{\boldsymbol{\beta}_k}&space;\sum_{i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;(y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle)^2,&space;\quad&space;\forall&space;k." title="\boldsymbol{\beta}^{t+1}_k = \arg\min_{\boldsymbol{\beta}_k} \sum_{i = 1}^{N} {w}_{k,i}^{t+1} (y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)^2, \quad \forall k." />
+
 
 It can be easily shown that this problem has the closed-form solution of the form  
-\begin{equation}
-\begin{aligned}
-{\boldsymbol{\beta}}_k^{t+1} = (\sum_{i = 1}^{N} {w}_{k,i}^{t+1} \textbf{x}_i \textbf{x}_i^{T})^{-1} \sum_{ i = 1}^{N} {w}_{k,i}^{t+1} y_i \textbf{x}_i, \;\;\;\forall k.   
-\end{aligned}
-\end{equation}
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}_k^{t&plus;1}&space;=&space;(\sum_{i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;\textbf{x}_i&space;\textbf{x}_i^{T})^{-1}&space;\sum_{&space;i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;y_i&space;\textbf{x}_i,&space;\;\;\;\forall&space;k." title="{\boldsymbol{\beta}}_k^{t+1} = (\sum_{i = 1}^{N} {w}_{k,i}^{t+1} \textbf{x}_i \textbf{x}_i^{T})^{-1} \sum_{ i = 1}^{N} {w}_{k,i}^{t+1} y_i \textbf{x}_i, \;\;\;\forall k." />
 
 
 # Additive Laplacian noise 
