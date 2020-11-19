@@ -24,6 +24,11 @@ where <img src="https://latex.codecogs.com/gif.latex?\inline&space;\sigma" title
 
 Our goal is inferring <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^*" title="\boldsymbol{\beta}^*" /> given <img src="https://latex.codecogs.com/gif.latex?\inline&space;\{(y_i,&space;\textbf{x}_{i})\}_{i&space;=&space;1}^N" title="\{(y_i, \textbf{x}_{i})\}_{i = 1}^N" /> via Maximum likelihood estimator (MLE), which is the commonly used in practice [[4]](#4). Given the described model, the MLE <img src="https://latex.codecogs.com/gif.latex?\inline&space;\widehat{\boldsymbol{\beta}}" title="\widehat{\boldsymbol{\beta}}" /> can be computed by solving: 
 
+<img src="https://latex.codecogs.com/gif.latex?\hat{\boldsymbol{\beta}}=&space;\arg\max_{\boldsymbol{\beta}}&space;\;&space;\log&space;\mathcal{P}(y_1,\ldots,&space;y_N|&space;\textbf{X},&space;\boldsymbol{\beta})" title="\hat{\boldsymbol{\beta}}= \arg\max_{\boldsymbol{\beta}} \; \log \mathcal{P}(y_1,\ldots, y_N| \textbf{X}, \boldsymbol{\beta})" />
+
+<img src="https://latex.codecogs.com/gif.latex?\arg\max_{\boldsymbol{\beta}}&space;\;&space;\sum_{i&space;=&space;1}^N&space;\log&space;\mathcal{P}(y_i|&space;\textbf{x}_i,\boldsymbol{\beta})" title="\arg\max_{\boldsymbol{\beta}} \; \sum_{i = 1}^N \log \mathcal{P}(y_i| \textbf{x}_i,\boldsymbol{\beta})" />
+
+<img src="https://latex.codecogs.com/gif.latex?\arg\max_{\boldsymbol{\beta}}&space;\;&space;\sum_{i&space;=&space;1}^N&space;\log&space;\sum_{k&space;=&space;1}^{K}&space;p_{k}&space;f_{\epsilon}(y_i-&space;\langle&space;\textbf{x}_{i},&space;{\boldsymbol{\beta}}_{k}\rangle)" title="\arg\max_{\boldsymbol{\beta}} \; \sum_{i = 1}^N \log \sum_{k = 1}^{K} p_{k} f_{\epsilon}(y_i- \langle \textbf{x}_{i}, {\boldsymbol{\beta}}_{k}\rangle)" />
 \begin{align}\label{eg:Likelihood}
 \nonumber
 \hat{\boldsymbol{\beta}}= \arg\max_{\boldsymbol{\beta}} \; & \log \mathcal{P}(y_1,\ldots, y_N| \X, \boldsymbol{\beta})
