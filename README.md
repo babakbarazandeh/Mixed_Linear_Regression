@@ -36,7 +36,7 @@ Our goal is inferring $\boldsymbol{\beta}^*$ given $\{(y_i, \x_{i})\}_{i = 1}^N 
 
 Next, we will discuss how to solve this problem. 
 # Summary of the EM algorithm 
-The idea behind the proposed algorithm is that in each iteration, the maximization problem is solved to a good accuracy. This gives us an estimate of the gradient of the minimization problem. This gradient is later used for solving the outer minimization problem.
+The steps of the EM algrhim for both Gaussian and Laplacian case is summarized in the following pseudo-code.
 <p align="center">
   <img width="380" height="300" src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/EM.png">
 </p>
