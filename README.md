@@ -56,10 +56,8 @@ It can be easily shown that this problem has the closed-form solution of the for
 
 # Additive Laplacian noise 
 For the Laplacian case, the problem in~\eqref{M-step-seperate} is equivalent to 
-\begin{align}\label{eq:lap}
-{\boldsymbol{\beta}}^{t+1}_{k} &= \argmin_{\bbeta_k}  \; \sum_{i = 1}^{N}{w}_{k,i}^t 
-\;\;  |y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle|,\quad \forall k.
-\end{align}
+
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t&plus;1}_{k}&space;=&space;\arg\min_{\boldsymbol{\beta}_k}&space;\;&space;\sum_{i&space;=&space;1}^{N}{w}_{k,i}^t&space;\;\;&space;|y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle|,\quad&space;\forall&space;k." title="{\boldsymbol{\beta}}^{t+1}_{k} = \arg\min_{\boldsymbol{\beta}_k} \; \sum_{i = 1}^{N}{w}_{k,i}^t \;\; |y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle|,\quad \forall k." />
 
 Despite convexity of this problem,  this optimization problem is non-smooth. Thus, one needs to use sub-gradient or other iterative methods for solving it. However, these methods suffer from slow rate of convergence and they are sensitive to tuning hyperparameters such as step-size~\cite{nemirovsky1983problem}. 
 %estimating $ \bbeta^{t+1}$ requires solving (potentially large-scale) nodifferentia$K$ parallel weighted least absolute deviations problem. Despite convexity of the resulting optimization  problem, non-differentiability of this function makes efficient methods such as gradient descent inefficient in practice. 
