@@ -33,7 +33,7 @@ Next, we will discuss how to solve this problem in both Gaussian and Laplacian c
 
 
 \subsection{Expectation-Maximization Algorithm}
-EM algorithm is an iterative method that in each iteration finds a tight lower-bound for the objective function of the MLE problem and maximizes that lower-bound at that iteration~\cite{razaviyayn2013unified, dempster1977maximum}. More precisely, the first step (E-step) involves updating the latent data labels  and the second step (M-step) includes updating the parameters. That is, the first step updates the probability of each data point belonging to different labels given the estimated coefficients, and the second step updates the coefficients given the label of all data. Let ${\boldsymbol{\beta}}^{t} = ({\boldsymbol{\beta}}_{1}^{t},\cdots, {\boldsymbol{\beta}}^{t}_{K})$ be the estimated regressors and ${w}_{k,i}^{t}$ be the probability that $i^{th}$ data belongs to $k^{th}$ component at iteration $t$. Starting from the initial points $ \bbeta^0$ and $ w ^{0}_{k,i}$, two major steps of the EM algorithm is as following,\\
+EM algorithm is an iterative method that in each iteration finds a tight lower-bound for the objective function of the MLE problem and maximizes that lower-bound at that iteration[[5]](#5)[[6]](#6). More precisely, the first step (E-step) involves updating the latent data labels  and the second step (M-step) includes updating the parameters. That is, the first step updates the probability of each data point belonging to different labels given the estimated coefficients, and the second step updates the coefficients given the label of all data. Let ${\boldsymbol{\beta}}^{t} = ({\boldsymbol{\beta}}_{1}^{t},\cdots, {\boldsymbol{\beta}}^{t}_{K})$ be the estimated regressors and ${w}_{k,i}^{t}$ be the probability that $i^{th}$ data belongs to $k^{th}$ component at iteration $t$. Starting from the initial points $ \bbeta^0$ and $ w ^{0}_{k,i}$, two major steps of the EM algorithm is as following,\\
 
 E-step:
 \begin{equation}\nonumber
@@ -146,9 +146,17 @@ Knowledge discovery and data mining, 1999, pp. 63–72.
 regression with multiple components,” in Advances
 in neural information processing systems, 2016, pp.
 2190–2198.
-
-
-
+<a id="5">[5]</a> 
+M. Razaviyayn, M. Hong, and Z.-Q. Luo, “A unified
+convergence analysis of block successive minimization
+methods for nonsmooth optimization,” SIAM Journal
+on Optimization, vol. 23, no. 2, pp. 1126–1153, 2013.
+<a id="6">[6]</a> 
+ A. P. Dempster, N. M. Laird, and D. B. Rubin,
+“Maximum likelihood from incomplete data via the em
+algorithm,” Journal of the Royal Statistical Society:
+Series B (Methodological), vol. 39, no. 1, pp. 1–22,
+1977
 # Getting started
 Run Main.m
 
