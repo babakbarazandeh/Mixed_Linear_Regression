@@ -36,12 +36,7 @@ E-step:
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{w}_{k,i}^{t&plus;1}=&space;\frac{f_{\epsilon}(y_i-&space;\langle&space;\textbf{x}_{i},&space;\boldsymbol{\beta}_{k}^{t}\rangle)}{\sum\limits_{j&space;=&space;1}^{K}f_{\epsilon}(y_i-&space;\langle&space;\textbf{x}_{i},&space;\boldsymbol{\beta}^{t}_{j}\rangle)&space;},&space;\;&space;\forall&space;k,i," title="{w}_{k,i}^{t+1}= \frac{f_{\epsilon}(y_i- \langle \textbf{x}_{i}, \boldsymbol{\beta}_{k}^{t}\rangle)}{\sum\limits_{j = 1}^{K}f_{\epsilon}(y_i- \langle \textbf{x}_{i}, \boldsymbol{\beta}^{t}_{j}\rangle) }, \; \forall k,i," />
 
 M-step:
-\begin{align}\label{M-step}
-\nonumber
-{\boldsymbol{\beta}}^{t+1} &= \arg\min_{\boldsymbol{\beta}} - \sum_{i = 1}^{N}\sum_{k = 1}^{K} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)
-\\
-&=\arg\min_{\boldsymbol{\beta}} - \sum_{k = 1}^{K} \sum_{i = 1}^{N} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle).
-\end{align}
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t&plus;1}&space;=&space;\arg\min_{\boldsymbol{\beta}}&space;-&space;\sum_{i&space;=&space;1}^{N}\sum_{k&space;=&space;1}^{K}&space;{w}_{k,i}^{t&plus;1}&space;\log&space;\;&space;f_{\epsilon}(y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle)" title="{\boldsymbol{\beta}}^{t+1} = \arg\min_{\boldsymbol{\beta}} - \sum_{i = 1}^{N}\sum_{k = 1}^{K} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)" />
 
 The problem in~\eqref{M-step} is separable with respect to $\boldsymbol{\beta}_k$'s. Thus, we can estimate  $ \bbeta_k^{t+1}$'s in parallel by solving
 \begin{align}\label{M-step-seperate}
