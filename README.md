@@ -38,17 +38,13 @@ E-step:
 M-step:
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t&plus;1}&space;=&space;\arg\min_{\boldsymbol{\beta}}&space;-&space;\sum_{i&space;=&space;1}^{N}\sum_{k&space;=&space;1}^{K}&space;{w}_{k,i}^{t&plus;1}&space;\log&space;\;&space;f_{\epsilon}(y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle)" title="{\boldsymbol{\beta}}^{t+1} = \arg\min_{\boldsymbol{\beta}} - \sum_{i = 1}^{N}\sum_{k = 1}^{K} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)" />
 
-The problem in~\eqref{M-step} is separable with respect to $\boldsymbol{\beta}_k$'s. Thus, we can estimate  $ \bbeta_k^{t+1}$'s in parallel by solving
-\begin{align}\label{M-step-seperate}
- \bbeta^{t+1}_{k}=\arg\min_{\boldsymbol{\beta}_k} - \sum_{i = 1}^{N} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle), \forall k.
-\end{align}
+The problem in~\eqref{M-step} is separable with respect to <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_k" title="\boldsymbol{\beta}_k" />'s. Thus, we can estimate  <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_k^{t&plus;1}" title="\boldsymbol{\beta}_k^{t+1}" />'s in parallel by solving
+
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^{t&plus;1}_{k}=\arg\min_{\boldsymbol{\beta}_k}&space;-&space;\sum_{i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;\log&space;\;&space;f_{\epsilon}(y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle),&space;\forall&space;k." title="\boldsymbol{\beta}^{t+1}_{k}=\arg\min_{\boldsymbol{\beta}_k} - \sum_{i = 1}^{N} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle), \forall k." />
+
 Let us discuss this optimization problem in two cases of Gaussian and Laplacian noise scenarios:
 
-%In the next sections, we derive the solution for problem~\eqref{M-step-seperate} and show that when the additive noise is Laplacian, it results in a challenging problem.  
-
-\vspace{0.2cm}
-
-\subsubsection{Additive Gaussian noise }
+#Additive Gaussian noise
 When the additive noise has Gaussian distribution, problem~\eqref{M-step-seperate} is equivalent to
 \begin{equation}\nonumber
 \begin{aligned}
