@@ -59,21 +59,7 @@ For the Laplacian case, the problem in~\eqref{M-step-seperate} is equivalent to
 
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t&plus;1}_{k}&space;=&space;\arg\min_{\boldsymbol{\beta}_k}&space;\;&space;\sum_{i&space;=&space;1}^{N}{w}_{k,i}^t&space;\;\;&space;|y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle|,\quad&space;\forall&space;k." title="{\boldsymbol{\beta}}^{t+1}_{k} = \arg\min_{\boldsymbol{\beta}_k} \; \sum_{i = 1}^{N}{w}_{k,i}^t \;\; |y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle|,\quad \forall k." />
 
-Despite convexity of this problem,  this optimization problem is non-smooth. Thus, one needs to use sub-gradient or other iterative methods for solving it. However, these methods suffer from slow rate of convergence and they are sensitive to tuning hyperparameters such as step-size~\cite{nemirovsky1983problem}. 
-%estimating $ \bbeta^{t+1}$ requires solving (potentially large-scale) nodifferentia$K$ parallel weighted least absolute deviations problem. Despite convexity of the resulting optimization  problem, non-differentiability of this function makes efficient methods such as gradient descent inefficient in practice. 
-Another potential approach for solving~\eqref{eq:lap} is to reformulate it as a linear programming problem 
-\begin{equation}\nonumber
-\begin{aligned}
-\; \bbeta ^{t+1}_{k} =& \argmin_{\bbeta_k, \{h_{i}\}_{i = 1}^N}  \;\sum_{i = 1}^{N} {w}_{k,i}^{t+1} h_{i} \quad 
-\\
-&\textit{s.t.}\quad  h_{i} \geq  y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i\rangle, \;\;\forall i= 1,\ldots, n,\\
-& \quad \quad \; h_i\geq -(y_i - \langle \boldsymbol{\beta}_k,\textbf{x}_i\rangle), \;\;\forall i=1,\ldots,n. 
-\end{aligned}
-\end{equation}
-\vspace{0.2cm}
-
-
-However, this linear programming has to be solved in each iteration of the EM algorithm, which  makes EM computationally expensive in the presence of Laplacian noise (specially in large-scale problems). 
+Despite convexity of this problem,  this optimization problem is non-smooth. Thus, we use sub-gradientfor solving it.
 
 # Summary of the EM algorithm 
 The idea behind the proposed algorithm is that in each iteration, the maximization problem is solved to a good accuracy. This gives us an estimate of the gradient of the minimization problem. This gradient is later used for solving the outer minimization problem.
