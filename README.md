@@ -18,11 +18,11 @@ In this work, we assume that <img src="https://latex.codecogs.com/gif.latex?\inl
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\epsilon)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}&space;e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in&space;Gaussian&space;scenario)}" title="f_{\epsilon}(\epsilon) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in Gaussian scenario)}" />
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\epsilon)&space;=&space;\frac{1}{2b}&space;e^{-\frac{|\epsilon|}{b}},&space;b&space;=&space;\frac{\sigma}{\sqrt{2}}~\textit{(in&space;Laplacian&space;scenario)}" title="f_{\epsilon}(\epsilon) = \frac{1}{2b} e^{-\frac{|\epsilon|}{b}}, b = \frac{\sigma}{\sqrt{2}}~\textit{(in Laplacian scenario)}" />
 
-where <img src="https://latex.codecogs.com/gif.latex?\inline&space;\sigma" title="\sigma" /> is the standard deviation of each distribution that is assumed to be known a priori. This limited choice of the additive noise is based on the fact that these two distributions cover wide range of applications such as medical image denoising[[1]](#1), video retrieval[[2]](#2) and clustering trajectories[[3]](#3).  
+where <img src="https://latex.codecogs.com/gif.latex?\inline&space;\sigma" title="\sigma" /> is the standard deviation of each distribution that is assumed to be known a priori. This limited choice of the additive noise is based on the fact that these two distributions cover wide range of applications such as medical image denoising [[1]](#1), video retrieval [[2]](#2) and clustering trajectories [[3]](#3).  
 
 
 
-Our goal is inferring $\boldsymbol{\beta}^*$ given $\{(y_i, \x_{i})\}_{i = 1}^N $ via Maximum likelihood estimator (MLE), which is the commonly used in practice~\cite{zhong2016mixed}. Given the described model, the MLE $\widehat{\boldsymbol{\beta}}$ can be computed by solving: 
+Our goal is inferring <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^*" title="\boldsymbol{\beta}^*" /> given <img src="https://latex.codecogs.com/gif.latex?\inline&space;\{(y_i,&space;\textbf{x}_{i})\}_{i&space;=&space;1}^N" title="\{(y_i, \textbf{x}_{i})\}_{i = 1}^N" /> via Maximum likelihood estimator (MLE), which is the commonly used in practice [[4]](#4). Given the described model, the MLE $\widehat{\boldsymbol{\beta}}$ can be computed by solving: 
 
 \begin{align}\label{eg:Likelihood}
 \nonumber
@@ -71,7 +71,16 @@ IEEE Transactions on Multimedia, vol. 9, no. 7, pp.
 S. Gaffney and P. Smyth, “Trajectory clustering with
 mixtures of regression models,” in Proceedings of
 the fifth ACM SIGKDD international conference on
-Knowledge discovery and data mining, 1999, pp. 63–72
+Knowledge discovery and data mining, 1999, pp. 63–72.
+
+<a id="4">[4]</a> 
+ K. Zhong, P. Jain, and I. S. Dhillon, “Mixed linear
+regression with multiple components,” in Advances
+in neural information processing systems, 2016, pp.
+2190–2198.
+
+
+
 # Getting started
 Run Main.m
 
