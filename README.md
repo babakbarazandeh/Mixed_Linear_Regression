@@ -29,6 +29,78 @@ Our goal is inferring <img src="https://latex.codecogs.com/gif.latex?\inline&spa
 
 Next, we will discuss how to solve this problem in both Gaussian and Laplacian cases using EM algorithm. 
 
+# EM for Gaussian Case
+
+
+\subsection{Expectation-Maximization Algorithm}
+EM algorithm is an iterative method that in each iteration finds a tight lower-bound for the objective function of the MLE problem and maximizes that lower-bound at that iteration~\cite{razaviyayn2013unified, dempster1977maximum}. More precisely, the first step (E-step) involves updating the latent data labels  and the second step (M-step) includes updating the parameters. That is, the first step updates the probability of each data point belonging to different labels given the estimated coefficients, and the second step updates the coefficients given the label of all data. Let ${\boldsymbol{\beta}}^{t} = ({\boldsymbol{\beta}}_{1}^{t},\cdots, {\boldsymbol{\beta}}^{t}_{K})$ be the estimated regressors and ${w}_{k,i}^{t}$ be the probability that $i^{th}$ data belongs to $k^{th}$ component at iteration $t$. Starting from the initial points $ \bbeta^0$ and $ w ^{0}_{k,i}$, two major steps of the EM algorithm is as following,\\
+
+E-step:
+\begin{equation}\nonumber
+\begin{aligned}
+{w}_{k,i}^{t+1}= \frac{f_{\epsilon}(y_i- \langle \textbf{x}_{i},  \bbeta_{k}^{t}\rangle)}{\sum\limits_{j = 1}^{K}f_{\epsilon}(y_i- \langle \textbf{x}_{i},  \bbeta^{t}_{j}\rangle) }, \; \forall k,i, 
+\end{aligned}
+\end{equation}
+
+M-step:
+\begin{align}\label{M-step}
+\nonumber
+{\boldsymbol{\beta}}^{t+1} &= \arg\min_{\boldsymbol{\beta}} - \sum_{i = 1}^{N}\sum_{k = 1}^{K} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)
+\\
+&=\arg\min_{\boldsymbol{\beta}} - \sum_{k = 1}^{K} \sum_{i = 1}^{N} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle).
+\end{align}
+
+The problem in~\eqref{M-step} is separable with respect to $\boldsymbol{\beta}_k$'s. Thus, we can estimate  $ \bbeta_k^{t+1}$'s in parallel by solving
+\begin{align}\label{M-step-seperate}
+ \bbeta^{t+1}_{k}=\arg\min_{\boldsymbol{\beta}_k} - \sum_{i = 1}^{N} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle), \forall k.
+\end{align}
+Let us discuss this optimization problem in two cases of Gaussian and Laplacian noise scenarios:
+
+%In the next sections, we derive the solution for problem~\eqref{M-step-seperate} and show that when the additive noise is Laplacian, it results in a challenging problem.  
+
+\vspace{0.2cm}
+
+\subsubsection{Additive Gaussian noise }
+When the additive noise has Gaussian distribution, problem~\eqref{M-step-seperate} is equivalent to
+\begin{equation}\nonumber
+\begin{aligned}
+ \bbeta^{t+1}_k = \arg\min_{\boldsymbol{\beta}_k}  \sum_{i = 1}^{N} {w}_{k,i}^{t+1}  (y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)^2, \quad \forall k.
+\end{aligned}
+\end{equation}
+% The solution of this problem can be easily derived by,
+% \begin{align*}
+%     \nabla_{\bbeta_k} \sum_{i = 1}^{N} {w}_{k,i}^{t+1}  (y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)^2, \quad \forall k. = 0 \rightarrow
+% \end{align*}
+
+It can be easily shown that this problem has the closed-form solution of the form  
+\begin{equation}
+\begin{aligned}
+{\boldsymbol{\beta}}_k^{t+1} = (\sum_{i = 1}^{N} {w}_{k,i}^{t+1} \textbf{x}_i \textbf{x}_i^{T})^{-1} \sum_{ i = 1}^{N} {w}_{k,i}^{t+1} y_i \textbf{x}_i, \;\;\;\forall k.   
+\end{aligned}
+\end{equation}
+\vspace{0.2cm}
+\subsubsection{Additive Laplacian noise }
+For the Laplacian case, the problem in~\eqref{M-step-seperate} is equivalent to 
+\begin{align}\label{eq:lap}
+{\boldsymbol{\beta}}^{t+1}_{k} &= \argmin_{\bbeta_k}  \; \sum_{i = 1}^{N}{w}_{k,i}^t 
+\;\;  |y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle|,\quad \forall k.
+\end{align}
+
+Despite convexity of this problem,  this optimization problem is non-smooth. Thus, one needs to use sub-gradient or other iterative methods for solving it. However, these methods suffer from slow rate of convergence and they are sensitive to tuning hyperparameters such as step-size~\cite{nemirovsky1983problem}. 
+%estimating $ \bbeta^{t+1}$ requires solving (potentially large-scale) nodifferentia$K$ parallel weighted least absolute deviations problem. Despite convexity of the resulting optimization  problem, non-differentiability of this function makes efficient methods such as gradient descent inefficient in practice. 
+Another potential approach for solving~\eqref{eq:lap} is to reformulate it as a linear programming problem 
+\begin{equation}\nonumber
+\begin{aligned}
+\; \bbeta ^{t+1}_{k} =& \argmin_{\bbeta_k, \{h_{i}\}_{i = 1}^N}  \;\sum_{i = 1}^{N} {w}_{k,i}^{t+1} h_{i} \quad 
+\\
+&\textit{s.t.}\quad  h_{i} \geq  y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i\rangle, \;\;\forall i= 1,\ldots, n,\\
+& \quad \quad \; h_i\geq -(y_i - \langle \boldsymbol{\beta}_k,\textbf{x}_i\rangle), \;\;\forall i=1,\ldots,n. 
+\end{aligned}
+\end{equation}
+\vspace{0.2cm}
+
+
+However, this linear programming has to be solved in each iteration of the EM algorithm, which  makes EM computationally expensive in the presence of Laplacian noise (specially in large-scale problems). 
 
 # Summary of the EM algorithm 
 The idea behind the proposed algorithm is that in each iteration, the maximization problem is solved to a good accuracy. This gives us an estimate of the gradient of the minimization problem. This gradient is later used for solving the outer minimization problem.
