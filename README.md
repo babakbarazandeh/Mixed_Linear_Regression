@@ -27,7 +27,9 @@ Our goal is inferring <img src="https://latex.codecogs.com/gif.latex?\inline&spa
 <img src="https://latex.codecogs.com/gif.latex?\hat{\boldsymbol{\beta}}=&space;\arg\max_{\boldsymbol{\beta}}&space;\;&space;\log&space;\mathcal{P}(y_1,\ldots,&space;y_N|&space;\textbf{X},&space;\boldsymbol{\beta})" title="\hat{\boldsymbol{\beta}}= \arg\max_{\boldsymbol{\beta}} \; \log \mathcal{P}(y_1,\ldots, y_N| \textbf{X}, \boldsymbol{\beta})" />
 
 
-Next, we will discuss how to solve this problem. 
+Next, we will discuss how to solve this problem in both Gaussian and Laplacian cases using EM algorithm. 
+
+
 # Summary of the EM algorithm 
 The idea behind the proposed algorithm is that in each iteration, the maximization problem is solved to a good accuracy. This gives us an estimate of the gradient of the minimization problem. This gradient is later used for solving the outer minimization problem.
 <p align="center">
