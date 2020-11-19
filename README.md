@@ -11,9 +11,12 @@ MLR is a generalization of a simple linear regression model in which the data po
 
 where  <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_{\alpha_i}^*" title="\boldsymbol{\beta}_{\alpha_i}^*" />  are the ground-truth regression parameters. <img src="https://latex.codecogs.com/gif.latex?\inline&space;\epsilon_{i}" title="\epsilon_{i}" /> is the<img src="https://latex.codecogs.com/gif.latex?\inline&space;i^{th}" title="i^{th}" /> additive noise with probability density function <img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\cdot)" title="f_{\epsilon}(\cdot)" />  and <img src="https://latex.codecogs.com/gif.latex?\inline&space;\alpha_i&space;\in&space;\{1,\cdots,&space;K\}" title="\alpha_i \in \{1,\cdots, K\}" /> where  <img src="https://latex.codecogs.com/gif.latex?\inline&space;P(\alpha_i&space;=&space;k)&space;=&space;p_k" title="P(\alpha_i = k) = p_k" /> with <img src="https://latex.codecogs.com/gif.latex?\inline&space;\sum_{k&space;=&space;1}^K&space;p_k=&space;1" title="\sum_{k = 1}^K p_k= 1" />. For simplicity of notation, we define <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^*&space;=&space;[\boldsymbol{\beta}_1^*,\cdots,\boldsymbol{\beta}_K^*]" title="\boldsymbol{\beta}^* = [\boldsymbol{\beta}_1^*,\cdots,\boldsymbol{\beta}_K^*]" />.
 
-\vspace{0.2cm}
 
-In this work, we assume that $p_k = \frac{1}{K},\; \forall k \in \{1,\cdots, K\}$ and $\{\epsilon_i\}_{i = 1}^N$ are independent and identically distributed with probability density function $f_{\epsilon}(\cdot)$ that has Gaussian or Laplacian distribution, i.e.,
+
+In this work, we assume that <img src="https://latex.codecogs.com/gif.latex?\inline&space;p_k&space;=&space;\frac{1}{K},\;&space;\forall&space;k&space;\in&space;\{1,\cdots,&space;K\}" title="p_k = \frac{1}{K},\; \forall k \in \{1,\cdots, K\}" /> and <img src="https://latex.codecogs.com/gif.latex?\inline&space;\{\epsilon_i\}_{i&space;=&space;1}^N" title="\{\epsilon_i\}_{i = 1}^N" /> are independent and identically distributed with probability density function <img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\cdot)" title="f_{\epsilon}(\cdot)" />that has Gaussian or Laplacian distribution, i.e.,
+
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\epsilon)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}&space;e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in&space;Gaussian&space;scenario)}" title="f_{\epsilon}(\epsilon) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in Gaussian scenario)}" />
+<img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\epsilon)&space;=&space;\frac{1}{2b}&space;e^{-\frac{|\epsilon|}{b}},&space;b&space;=&space;\frac{\sigma}{\sqrt{2}}~\textit{(in&space;Laplacian&space;scenario)}" title="f_{\epsilon}(\epsilon) = \frac{1}{2b} e^{-\frac{|\epsilon|}{b}}, b = \frac{\sigma}{\sqrt{2}}~\textit{(in Laplacian scenario)}" />
 \begin{align*}
 &f_{\epsilon}(\epsilon) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in Gaussian scenario)}, 
 \\
@@ -21,7 +24,7 @@ In this work, we assume that $p_k = \frac{1}{K},\; \forall k \in \{1,\cdots, K\}
 \end{align*}
 where $\sigma$ is the standard deviation of each distribution that is assumed to be known a priori. This limited choice of the additive noise is based on the fact that these two distributions cover wide range of applications such as medical image denoising~\cite{bhowmick2006laplace,klein2014fisher}, video retrieval~\cite{amin2007application} and clustering trajectories~\cite{gaffney1999trajectory}.  
 
-\vspace{0.2cm}
+
 
 Our goal is inferring $\boldsymbol{\beta}^*$ given $\{(y_i, \x_{i})\}_{i = 1}^N $ via Maximum likelihood estimator (MLE), which is the commonly used in practice~\cite{zhong2016mixed}. Given the described model, the MLE $\widehat{\boldsymbol{\beta}}$ can be computed by solving: 
 
