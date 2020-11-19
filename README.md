@@ -9,7 +9,7 @@ MLR is a generalization of a simple linear regression model in which the data po
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=y_i&space;=&space;\langle&space;\boldsymbol{\beta}_{\alpha_i}^*,&space;\textbf{x}_i&space;\rangle&space;&plus;&space;\epsilon_{i},\;\;\;&space;\quad&space;\forall&space;i&space;\in&space;\{1,\cdots,&space;N\}," target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_i&space;=&space;\langle&space;\boldsymbol{\beta}_{\alpha_i}^*,&space;\textbf{x}_i&space;\rangle&space;&plus;&space;\epsilon_{i},\;\;\;&space;\quad&space;\forall&space;i&space;\in&space;\{1,\cdots,&space;N\}," title="y_i = \langle \boldsymbol{\beta}_{\alpha_i}^*, \textbf{x}_i \rangle + \epsilon_{i},\;\;\; \quad \forall i \in \{1,\cdots, N\}," /></a>
 
-where  - <img src="https://latex.codecogs.com/gif.latex?s=\text { sensor reading }  " />  are the ground-truth regression parameters. $\epsilon_i$ is the $i^{th}$ additive noise with probability density function $f_{\epsilon}(\cdot)$ and $\alpha_i \in \{1,\cdots, K\}$ where  $P(\alpha_i = k) = p_k$ with $\sum_{k = 1}^K p_k= 1$. For simplicity of notation, we define $\boldsymbol{\beta}^* = [\boldsymbol{\beta}_1^*,\cdots,\boldsymbol{\beta}_K^*]$.
+where  <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_{\alpha_i}^*" title="\boldsymbol{\beta}_{\alpha_i}^*" />  are the ground-truth regression parameters. $\epsilon_i$ is the $i^{th}$ additive noise with probability density function $f_{\epsilon}(\cdot)$ and $\alpha_i \in \{1,\cdots, K\}$ where  $P(\alpha_i = k) = p_k$ with $\sum_{k = 1}^K p_k= 1$. For simplicity of notation, we define $\boldsymbol{\beta}^* = [\boldsymbol{\beta}_1^*,\cdots,\boldsymbol{\beta}_K^*]$.
 
 \vspace{0.2cm}
 
