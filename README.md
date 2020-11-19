@@ -17,12 +17,8 @@ In this work, we assume that <img src="https://latex.codecogs.com/gif.latex?\inl
 
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\epsilon)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}&space;e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in&space;Gaussian&space;scenario)}" title="f_{\epsilon}(\epsilon) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in Gaussian scenario)}" />
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;f_{\epsilon}(\epsilon)&space;=&space;\frac{1}{2b}&space;e^{-\frac{|\epsilon|}{b}},&space;b&space;=&space;\frac{\sigma}{\sqrt{2}}~\textit{(in&space;Laplacian&space;scenario)}" title="f_{\epsilon}(\epsilon) = \frac{1}{2b} e^{-\frac{|\epsilon|}{b}}, b = \frac{\sigma}{\sqrt{2}}~\textit{(in Laplacian scenario)}" />
-\begin{align*}
-&f_{\epsilon}(\epsilon) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{\epsilon^2}{2\sigma^2}}~\textit{(in Gaussian scenario)}, 
-\\
-&f_{\epsilon}(\epsilon) = \frac{1}{2b} e^{-\frac{|\epsilon|}{b}}, b = \frac{\sigma}{\sqrt{2}}~\textit{(in Laplacian scenario)},
-\end{align*}
-where $\sigma$ is the standard deviation of each distribution that is assumed to be known a priori. This limited choice of the additive noise is based on the fact that these two distributions cover wide range of applications such as medical image denoising~\cite{bhowmick2006laplace,klein2014fisher}, video retrieval~\cite{amin2007application} and clustering trajectories~\cite{gaffney1999trajectory}.  
+
+where <img src="https://latex.codecogs.com/gif.latex?\inline&space;\sigma" title="\sigma" /> is the standard deviation of each distribution that is assumed to be known a priori. This limited choice of the additive noise is based on the fact that these two distributions cover wide range of applications such as medical image denoising[[1]](#1), video retrieval[[2]](#2) and clustering trajectories[[3]](#3).  
 
 
 
@@ -58,6 +54,12 @@ The above figure might not  be  a fair comparison  since each step of the propos
   <img width="350" height="50" src="https://github.com/babakbarazandeh/Multi-step-Accelerated-Proximal-Gradient-Descent-Ascent/blob/master/table.png">
 </p> <br/>
 
+
+## References
+<a id="1">[1]</a> 
+Dijkstra, E. W. (1968). 
+Go to statement considered harmful. 
+Communications of the ACM, 11(3), 147-148. 
 # Getting started
 Run Main.m
 
