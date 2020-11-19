@@ -37,7 +37,7 @@ Next, we will discuss how to solve this problem.
 # Summary of the EM algorithm 
 The idea behind the proposed algorithm is that in each iteration, the maximization problem is solved to a good accuracy. This gives us an estimate of the gradient of the minimization problem. This gradient is later used for solving the outer minimization problem.
 <p align="center">
-  <img width="380" height="300" src="https://github.com/babakbarazandeh/Multi-step-Accelerated-Proximal-Gradient-Descent-Ascent/blob/master/Algorithm.png">
+  <img width="380" height="300" src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/EM.png">
 </p>
  
 # Reuslts 
