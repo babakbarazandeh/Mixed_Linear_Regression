@@ -44,7 +44,7 @@ The problem in~\eqref{M-step} is separable with respect to <img src="https://lat
 
 Let us discuss this optimization problem in two cases of Gaussian and Laplacian noise scenarios:
 
-#Additive Gaussian noise
+# Additive Gaussian noise
 When the additive noise has Gaussian distribution, problem~\eqref{M-step-seperate} is equivalent to
 \begin{equation}\nonumber
 \begin{aligned}
@@ -62,8 +62,9 @@ It can be easily shown that this problem has the closed-form solution of the for
 {\boldsymbol{\beta}}_k^{t+1} = (\sum_{i = 1}^{N} {w}_{k,i}^{t+1} \textbf{x}_i \textbf{x}_i^{T})^{-1} \sum_{ i = 1}^{N} {w}_{k,i}^{t+1} y_i \textbf{x}_i, \;\;\;\forall k.   
 \end{aligned}
 \end{equation}
-\vspace{0.2cm}
-\subsubsection{Additive Laplacian noise }
+
+
+# Additive Laplacian noise 
 For the Laplacian case, the problem in~\eqref{M-step-seperate} is equivalent to 
 \begin{align}\label{eq:lap}
 {\boldsymbol{\beta}}^{t+1}_{k} &= \argmin_{\bbeta_k}  \; \sum_{i = 1}^{N}{w}_{k,i}^t 
