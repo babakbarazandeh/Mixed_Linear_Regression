@@ -27,15 +27,6 @@ Our goal is inferring <img src="https://latex.codecogs.com/gif.latex?\inline&spa
 <img src="https://latex.codecogs.com/gif.latex?\hat{\boldsymbol{\beta}}=&space;\arg\max_{\boldsymbol{\beta}}&space;\;&space;\log&space;\mathcal{P}(y_1,\ldots,&space;y_N|&space;\textbf{X},&space;\boldsymbol{\beta})" title="\hat{\boldsymbol{\beta}}= \arg\max_{\boldsymbol{\beta}} \; \log \mathcal{P}(y_1,\ldots, y_N| \textbf{X}, \boldsymbol{\beta})" />
 
 
-\begin{align}\label{eg:Likelihood}
-\nonumber
-\hat{\boldsymbol{\beta}}= \arg\max_{\boldsymbol{\beta}} \; & \log \mathcal{P}(y_1,\ldots, y_N| \X, \boldsymbol{\beta})
-\\ \nonumber
-= \arg\max_{\boldsymbol{\beta}} \; & \sum_{i = 1}^N \log \mathcal{P}(y_i| \bx_i,\boldsymbol{\beta})
-\\ 
-= \arg\max_{\boldsymbol{\beta}} \; &  \sum_{i = 1}^N   \log \left( \sum_{k = 1}^{K} p_{k} f_{\epsilon}(y_i- \langle \textbf{x}_{i}, {\boldsymbol{\beta}}_{k}\rangle)\right) 
-\end{align}
-
 Next, we will discuss how to solve this problem. 
 # Summary of the EM algorithm 
 The idea behind the proposed algorithm is that in each iteration, the maximization problem is solved to a good accuracy. This gives us an estimate of the gradient of the minimization problem. This gradient is later used for solving the outer minimization problem.
