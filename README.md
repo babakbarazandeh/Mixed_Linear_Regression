@@ -44,7 +44,7 @@ M-step:
 
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t&plus;1}&space;=&space;\arg\min_{\boldsymbol{\beta}}&space;-&space;\sum_{i&space;=&space;1}^{N}\sum_{k&space;=&space;1}^{K}&space;{w}_{k,i}^{t&plus;1}&space;\log&space;\;&space;f_{\epsilon}(y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle)" title="{\boldsymbol{\beta}}^{t+1} = \arg\min_{\boldsymbol{\beta}} - \sum_{i = 1}^{N}\sum_{k = 1}^{K} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)" />
 
-The problem in~\eqref{M-step} is separable with respect to <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_k" title="\boldsymbol{\beta}_k" />'s. Thus, we can estimate  <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_k^{t&plus;1}" title="\boldsymbol{\beta}_k^{t+1}" />'s in parallel by solving
+The above problem is separable with respect to <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_k" title="\boldsymbol{\beta}_k" />'s. Thus, we can estimate  <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}_k^{t&plus;1}" title="\boldsymbol{\beta}_k^{t+1}" />'s in parallel by solving
 
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^{t&plus;1}_{k}=\arg\min_{\boldsymbol{\beta}_k}&space;-&space;\sum_{i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;\log&space;\;&space;f_{\epsilon}(y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle),&space;\forall&space;k." title="\boldsymbol{\beta}^{t+1}_{k}=\arg\min_{\boldsymbol{\beta}_k} - \sum_{i = 1}^{N} {w}_{k,i}^{t+1} \log \; f_{\epsilon}(y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle), \forall k." />
 
@@ -61,7 +61,7 @@ It can be easily shown that this problem has the closed-form solution of the for
 
 
 # Additive Laplacian noise 
-For the Laplacian case, the problem in~\eqref{M-step-seperate} is equivalent to 
+For the Laplacian case, the problem in M-step is equivalent to 
 
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t&plus;1}_{k}&space;=&space;\arg\min_{\boldsymbol{\beta}_k}&space;\;&space;\sum_{i&space;=&space;1}^{N}{w}_{k,i}^t&space;\;\;&space;|y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle|,\quad&space;\forall&space;k." title="{\boldsymbol{\beta}}^{t+1}_{k} = \arg\min_{\boldsymbol{\beta}_k} \; \sum_{i = 1}^{N}{w}_{k,i}^t \;\; |y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle|,\quad \forall k." />
 
