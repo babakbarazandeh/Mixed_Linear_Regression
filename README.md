@@ -50,7 +50,7 @@ The above problem is separable with respect to <img src="https://latex.codecogs.
 
 Let us discuss this optimization problem in two cases of Gaussian and Laplacian noise scenarios:
 
-# Additive Gaussian noise
+## Additive Gaussian noise
 When the additive noise has Gaussian distribution, problem~\eqref{M-step-seperate} is equivalent to
 
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\beta}^{t&plus;1}_k&space;=&space;\arg\min_{\boldsymbol{\beta}_k}&space;\sum_{i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;(y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle)^2,&space;\quad&space;\forall&space;k." title="\boldsymbol{\beta}^{t+1}_k = \arg\min_{\boldsymbol{\beta}_k} \sum_{i = 1}^{N} {w}_{k,i}^{t+1} (y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle)^2, \quad \forall k." />
@@ -60,14 +60,14 @@ It can be easily shown that this problem has the closed-form solution of the for
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}_k^{t&plus;1}&space;=&space;(\sum_{i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;\textbf{x}_i&space;\textbf{x}_i^{T})^{-1}&space;\sum_{&space;i&space;=&space;1}^{N}&space;{w}_{k,i}^{t&plus;1}&space;y_i&space;\textbf{x}_i,&space;\;\;\;\forall&space;k." title="{\boldsymbol{\beta}}_k^{t+1} = (\sum_{i = 1}^{N} {w}_{k,i}^{t+1} \textbf{x}_i \textbf{x}_i^{T})^{-1} \sum_{ i = 1}^{N} {w}_{k,i}^{t+1} y_i \textbf{x}_i, \;\;\;\forall k." />
 
 
-# Additive Laplacian noise 
+## Additive Laplacian noise 
 For the Laplacian case, the problem in M-step is equivalent to 
 
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t&plus;1}_{k}&space;=&space;\arg\min_{\boldsymbol{\beta}_k}&space;\;&space;\sum_{i&space;=&space;1}^{N}{w}_{k,i}^t&space;\;\;&space;|y_i&space;-&space;\langle&space;\boldsymbol{\beta}_k,&space;\textbf{x}_i&space;\rangle|,\quad&space;\forall&space;k." title="{\boldsymbol{\beta}}^{t+1}_{k} = \arg\min_{\boldsymbol{\beta}_k} \; \sum_{i = 1}^{N}{w}_{k,i}^t \;\; |y_i - \langle \boldsymbol{\beta}_k, \textbf{x}_i \rangle|,\quad \forall k." />
 
 Despite convexity of this problem,  this optimization problem is non-smooth. Thus, we use sub-gradientfor solving it.
 
-# Summary of the EM algorithm 
+## Summary of the EM algorithm 
 The idea behind the proposed algorithm is that in each iteration, the maximization problem is solved to a good accuracy. This gives us an estimate of the gradient of the minimization problem. This gradient is later used for solving the outer minimization problem.
 <p align="center">
   <img width="380" height="300" src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/EM.png">
