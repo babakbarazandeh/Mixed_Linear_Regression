@@ -33,6 +33,12 @@ Next, we will discuss how to solve this problem in both Gaussian and Laplacian c
 EM algorithm is an iterative method that in each iteration finds a tight lower-bound for the objective function of the MLE problem and maximizes that lower-bound at that iteration [[5]](#5)[[6]](#6) . More precisely, the first step (E-step) involves updating the latent data labels  and the second step (M-step) includes updating the parameters. That is, the first step updates the probability of each data point belonging to different labels given the estimated coefficients, and the second step updates the coefficients given the label of all data. Let <img src="https://latex.codecogs.com/gif.latex?\inline&space;{\boldsymbol{\beta}}^{t}&space;=&space;({\boldsymbol{\beta}}_{1}^{t},\cdots,&space;{\boldsymbol{\beta}}^{t}_{K})" title="{\boldsymbol{\beta}}^{t} = ({\boldsymbol{\beta}}_{1}^{t},\cdots, {\boldsymbol{\beta}}^{t}_{K})" /> be the estimated regressors and <img src="https://latex.codecogs.com/gif.latex?\inline&space;{w}_{k,i}^{t}" title="{w}_{k,i}^{t}" /> be the probability that $<img src="https://latex.codecogs.com/gif.latex?\inline&space;i^{th}" title="i^{th}" /> data belongs to <img src="https://latex.codecogs.com/gif.latex?\inline&space;k^{th}" title="k^{th}" /> component at iteration <img src="https://latex.codecogs.com/gif.latex?\inline&space;t" title="t" />. Starting from the initial points <img src="https://latex.codecogs.com/gif.latex?\inline&space;\boldsymbol{\theta}^0" title="\boldsymbol{\theta}^0" /> and <img src="https://latex.codecogs.com/gif.latex?\inline&space;w&space;^{0}_{k,i}" title="w ^{0}_{k,i}" />, two major steps of the EM algorithm is as following,
 
 E-step:
+<pre>
+     This is Line1
+     This is Line2
+     This is Line3
+</pre>
+
 <img src="https://latex.codecogs.com/gif.latex?\inline&space;{w}_{k,i}^{t&plus;1}=&space;\frac{f_{\epsilon}(y_i-&space;\langle&space;\textbf{x}_{i},&space;\boldsymbol{\beta}_{k}^{t}\rangle)}{\sum\limits_{j&space;=&space;1}^{K}f_{\epsilon}(y_i-&space;\langle&space;\textbf{x}_{i},&space;\boldsymbol{\beta}^{t}_{j}\rangle)&space;},&space;\;&space;\forall&space;k,i," title="{w}_{k,i}^{t+1}= \frac{f_{\epsilon}(y_i- \langle \textbf{x}_{i}, \boldsymbol{\beta}_{k}^{t}\rangle)}{\sum\limits_{j = 1}^{K}f_{\epsilon}(y_i- \langle \textbf{x}_{i}, \boldsymbol{\beta}^{t}_{j}\rangle) }, \; \forall k,i," />
 
 M-step:
