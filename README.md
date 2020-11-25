@@ -112,5 +112,4 @@ algorithm,” Journal of the Royal Statistical Society:
 Series B (Methodological), vol. 39, no. 1, pp. 1–22,
 1977
 # Getting started
-Run Main.m
 
