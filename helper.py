@@ -68,7 +68,7 @@ def solver(x_0, X,y,w, step_size,N_itr_SGD):
     return x_0
 
 
-## details in the paper
+
 def EM_func_general( X, y, BETA_OPT,BETA,  N_itr,K,sd_noise, laplace_,step_size,N_itr_SGD):
     Error = np.ones((1, N_itr))
     Time = np.zeros((1, N_itr))
