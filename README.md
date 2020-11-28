@@ -76,7 +76,7 @@ The idea behind the proposed algorithm is that in each iteration, the maximizati
 # Numerical Experiments (In Progress)
 
 <p align="center">
-  <img width="380" height="300" src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/reuslt.jpg">
+  <img width="380" height="300" src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/result.jpg">
 </p>
  
 
