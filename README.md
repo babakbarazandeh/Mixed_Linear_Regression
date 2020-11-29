@@ -73,7 +73,7 @@ The idea behind the proposed algorithm is that in each iteration, the maximizati
   <img width="380" height="300" src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/EM.png">
 </p>
  
-# Numerical Experiments (In Progress)
+# Numerical Experiments
 
 In this section, we evaluate the performance of the EM in estimating the regressor components in the MLR problem under different noise structures. In this experiment, we consider <img src="https://latex.codecogs.com/gif.latex?K&space;\in&space;\{2,3,4\}" title="K \in \{2,3,4\}" /> components and <img src="https://latex.codecogs.com/gif.latex?d&space;\in&space;\{1,2\}" title="d \in \{1,\cdots, 5\}" />  dimension for MLR. 
 For each pair (K,d), we first generate the K regressors which result in N = 200 samples, i.e.,  <img src="https://latex.codecogs.com/gif.latex?\boldsymbol{\beta}_k^{*}&space;\sim&space;N(0,&space;I_d)" title="\boldsymbol{\beta}_k^{*} \sim N(0, I_d)" /> and <img src="https://latex.codecogs.com/gif.latex?\textbf{x}_{i}&space;\sim&space;N(0,&space;I_d),\;\forall&space;i&space;\in&space;\{1,\cdots,&space;N\},\;k&space;\in&space;\{1,\cdots,K\}" title="\textbf{x}_{i} \sim N(0, I_d),\;\forall i \in \{1,\cdots, N\},\;k \in \{1,\cdots,K\}" />. 
