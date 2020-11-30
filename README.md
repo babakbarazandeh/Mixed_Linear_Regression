@@ -108,11 +108,13 @@ Knowledge discovery and data mining, 1999, pp. 63–72.
 regression with multiple components,” in Advances
 in neural information processing systems, 2016, pp.
 2190–2198.
+
 <a id="5">[5]</a> 
 M. Razaviyayn, M. Hong, and Z.-Q. Luo, “A unified
 convergence analysis of block successive minimization
 methods for nonsmooth optimization,” SIAM Journal
 on Optimization, vol. 23, no. 2, pp. 1126–1153, 2013.
+
 <a id="6">[6]</a> 
  A. P. Dempster, N. M. Laird, and D. B. Rubin,
 “Maximum likelihood from incomplete data via the em
