@@ -121,5 +121,5 @@ on Optimization, vol. 23, no. 2, pp. 1126–1153, 2013.
 algorithm,” Journal of the Royal Statistical Society:
 Series B (Methodological), vol. 39, no. 1, pp. 1–22,
 1977
-# Getting started
+
 
