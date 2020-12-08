@@ -87,7 +87,7 @@ Follwoing figure shows the result of the experiment. This figure consists of fou
 Following table summarizes the major tuning parameters of the model and their default value. These paramters can be entered as the input of the main.py.
 
 <p align="center">
-  <img  src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/table.png">
+  <img  src="https://github.com/babakbarazandeh/Mixed_Linear_Regression/blob/main/table.png" width = "15">
 </p>
 
 ## References
